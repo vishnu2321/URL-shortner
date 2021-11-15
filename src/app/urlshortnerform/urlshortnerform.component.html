@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="container-md d-flex flex-column exclusive-container">
+
+        <div class="input-group mb-3 w-75">
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="URL to be shortend" 
+                aria-label="URL to be shortend" 
+                aria-describedby="button-addon2"
+                [value]="URL_to_be_shorted"
+                (input)="updateURL($event)"
+            />
+            <button class="btn btn-outline-primary" type="button" id="button-addon2" (click)="shortURL()">Run</button>
+        </div>
+    
+        <div class="shortend-url" *ngIf="run">
+            <p><span class="result">Shortend URL:: </span><a [href]="result">{{result}}</a></p>
+        </div>
+    
+        <div class="d-flex flex-row">
+            <button class="btn btn-outline-success me-4 clear" type="button" id="button-addon2" (click)="toHistoryPage()">History</button>
+            <button class="btn btn-outline-danger clear" type="button" id="button-addon2" (click)="clearURL()">Clear</button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

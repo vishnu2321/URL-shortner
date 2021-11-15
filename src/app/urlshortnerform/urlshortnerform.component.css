@@ -1,0 +1,23 @@
+.body{
+    height: 100vh;
+    background-image: url('../../assets/images/Ocean-2.5s-1536px.svg');
+}
+
+.exclusive-container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.exclusive-container div{
+    align-self: center;
+}
+
+.clear{
+    align-self: center;
+}
+
+.result{
+    color: aliceblue;
+}
